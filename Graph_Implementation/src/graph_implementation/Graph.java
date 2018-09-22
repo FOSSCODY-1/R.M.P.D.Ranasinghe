@@ -12,65 +12,65 @@ import java.util.*;
  * @author Damsara
  */
 public class Graph {
-    
-    
-    // abcdefgh
-    
-//    static class Edge{
-//        int from, to;
-//        
-//        Edge(int from,int to){
-//            this.from=from;
-//            this.to=to;
-//        }
-//    };
-    
-    private LinkedList<Integer> graph[];
-    private int numberOfVertices;
+      private LinkedList<Integer> graph[];
+      private int numberOfVertices;
 
     public Graph(int noOfVertices) {
-        
         this.numberOfVertices=noOfVertices;
-        graph = new LinkedList[this.numberOfVertices];
+        graph= new LinkedList[noOfVertices];
         
-        for(int i=0; i<numberOfVertices; i++){
-            graph[i]=new LinkedList();
+        for(int i=0; i<noOfVertices;i++){
+            graph[i]=new LinkedList<>();
         
         }
-        
-        
+                
     }
-    
     
     void addEdge(int from, int to){
         graph[from].add(to);
+         
     }
     
-    void printVertices(){
+     
+    void printGraph(){
         for(int i=0; i<numberOfVertices; i++){
-            graph[i]=new LinkedList();
-            System.out.println((graph[i]).toString());
+            if(graph[i].size()<0){
+                System.out.println("");
             
+            }else{
+                System.out.print("Vertex " + i + " is connected to : ");
+                for(int j=0;j<graph[i].size();j++){
+                    System.out.print(graph[i].get(j)+ " ");
+                
+                }
+                System.out.println("");
+            
+            }
         
         }
-    
-    
+              
     }
 
-    public static void main(String[] args) {
+    
+   public static void main(String[] args) {
+       
+        Scanner s1= new Scanner(System.in);
+        System.out.println("Enter the number of vertices : ");
+        int noOfVertices= s1.nextInt();
+        Graph g = new Graph(noOfVertices);
         
-        Graph g = new Graph(4);
+        int to,from;
+   
         
-        
-        
-        g.addEdge(0, 1);
-        g.addEdge(0, 2);
-        g.addEdge(1, 2);
-        g.addEdge(2, 3);
-        
-        System.out.println("Vertices" );
-        g.printVertices();
-          
+        for(int i=0; i<noOfVertices;i++){
+            System.out.println("Enter the source of the vertex : ");
+            from= s1.nextInt();
+            System.out.println("Enter the destination of the vertices : ");
+            to=s1.nextInt();
+            g.addEdge(from, to);
+        }
+              
+         g.printGraph();
     }
     
 }
