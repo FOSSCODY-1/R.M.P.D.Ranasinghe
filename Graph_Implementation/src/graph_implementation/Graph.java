@@ -30,7 +30,7 @@ public class Graph {
      
     void printGraph(){
         /*
-            * Tis function displays all the vertices in the graph and its connections(edges)
+            * This function displays all the vertices in the graph and its connections(edges)
         */
         
         for(int i=0; i<numberOfVertices; i++){
@@ -59,7 +59,7 @@ public class Graph {
         
         System.out.print(" \nBreadth First Search result of this graph is : ");      
         
-        boolean visited[]= new boolean[6];       // Boolean array has elements equal to no of vertices
+        boolean visited[]= new boolean[this.numberOfVertices];       // Boolean array has elements equal to no of vertices
         LinkedList<Integer> queue=new LinkedList<Integer>();
         visited[s]=true;
         queue.add(s);
@@ -106,7 +106,7 @@ public class Graph {
             * Depth First Search function
         */
         
-        boolean visited[]=new boolean[6];    // Boolean array has elements equal to no of vertices
+        boolean visited[]=new boolean[this.numberOfVertices];    // Boolean array has elements equal to no of vertices
         dfsBase(v, visited);
     
     }
@@ -115,9 +115,9 @@ public class Graph {
    public static void main(String[] args) {
        
         Scanner s1= new Scanner(System.in);
-//        System.out.println("Enter the number of vertices : ");
-//        int noOfVertices= s1.nextInt();
-        Graph g = new Graph(5);
+        System.out.println("Enter the number of vertices : ");
+        int noOfVertices= s1.nextInt();     // Gets the no of vertices for the graph from the user
+        Graph g = new Graph(noOfVertices);
         
 //        g.addEdge(0, 1);
 //        g.addEdge(0, 2);
