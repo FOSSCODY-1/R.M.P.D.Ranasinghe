@@ -17,23 +17,23 @@ Download the [Graph_Implementation.jar](Graph_Implementation.jar) file and doubl
 ![Main Window](window.JPG)
 
 ### Creating the graph 
-Enter the number of vertices and click on Create Graph button
+Enter the number of vertices and click on Create Graph button <br />
 ![](creategraph.jpg)
 
 ### Adding an edge 
-Enter the source and destination vertices and click on Add Edge button button
+Enter the source and destination vertices and click on Add Edge button button <br />
 ![](addinganedge.jpg)
 
 ### Performing BFS 
-Enter the starting node and click on BFS button
+Enter the starting node and click on BFS button <br />
 ![](bfs.jpg)
 
 ### Performing DFS 
-Enter the starting node and click on DFS button	
+Enter the starting node and click on DFS button	 <br />
 ![](dfs.jpg)	
 
 ### Printing the graph 
-Click on Print Graph button	
+Click on Print Graph button	 <br />
 ![](print.jpg)	
 	
 ## License
