@@ -1,13 +1,13 @@
 # Graph Implementation with BFS and DFS
 
-Implementation of directed and undirected graphs with following functionalities
-	* Adding a new vertex
-	* Adding a new edge
-	* Displaying a vertex
-	* Deleting a vertex
-	* Deleting an edge
-	* Breadth First Search (BFS)
-	* Depth First Search (DFS)
+Implementation of directed and undirected graphs with following functionalities <br />
+	* Adding a new vertex <br />
+	* Adding a new edge <br />
+	* Displaying a vertex <br />
+	* Deleting a vertex <br />
+	* Deleting an edge <br />
+	* Breadth First Search (BFS) <br />
+	* Depth First Search (DFS) 
 
 
 ## Running the program
