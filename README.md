@@ -17,11 +17,11 @@ Download the [Graph_Implementation.jar](Graph_Implementation.jar) file and doubl
 ![Main Window](window.JPG)
 
 ### Creating the graph 
-
+Enter the number of vertices and click on Create Graph button
 ![](creategraph.jpg)
 
 ### Adding an edge 
-
+Enter the source and destination vertices and click on Add Edge button button
 ![](addinganedge.jpg)
 
 ### Performing BFS 
