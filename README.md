@@ -31,6 +31,10 @@ Download the [Graph_Implementation.jar](Graph_Implementation.jar) file and doubl
 ### Performing DFS 
 	
 ![](dfs.jpg)	
+
+### Printing the graph 
+	
+![](print.jpg)	
 	
 ## License
 
