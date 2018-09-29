@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package graph_implementation;
 
 /**
@@ -16,6 +11,9 @@ public class graph_functions_interface extends javax.swing.JFrame {
      */
     public graph_functions_interface() {
         initComponents();
+        
+       
+        
     }
 
     /**
@@ -168,7 +166,8 @@ public class graph_functions_interface extends javax.swing.JFrame {
         String no=jTextField1.getText();
         int noOfVertices=Integer.parseInt(no);
         Graph g1= new Graph(noOfVertices);
-        
+        System.out.println("graph created");
+        //g1.printGraph();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -187,6 +186,7 @@ public class graph_functions_interface extends javax.swing.JFrame {
         
         int source= Integer.parseInt(from);
         int dest= Integer.parseInt(to);
+       
         
         
         
@@ -225,6 +225,9 @@ public class graph_functions_interface extends javax.swing.JFrame {
                 new graph_functions_interface().setVisible(true);
             }
         });
+        
+        
+       
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

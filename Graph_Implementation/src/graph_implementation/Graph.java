@@ -9,6 +9,14 @@ import java.util.*;
  */
 public class Graph {
       private LinkedList<Integer> graph[];
+
+    public Graph() {
+        graph= new LinkedList[20];        
+        for(int i=0; i<20;i++){
+            graph[i]=new LinkedList<>();
+        
+        }
+    }
       private int numberOfVertices;
 
     public Graph(int noOfVertices) {
@@ -22,13 +30,13 @@ public class Graph {
                 
     }
     
-    void addEdge(int from, int to){
+    public void addEdge(int from, int to){
         graph[from].add(to);
          
     }
     
      
-    void printGraph(){
+    public void printGraph(){
         /*
             * This function displays all the vertices in the graph and its connections(edges)
         */
@@ -52,7 +60,7 @@ public class Graph {
               
     }
     
-    void bfs(int s){
+    public void bfs(int s){
         /*
             * Breadth First Search function
         */
@@ -83,7 +91,7 @@ public class Graph {
     }
     
     
-    void dfsBase(int v, boolean visited[]){
+    public void dfsBase(int v, boolean visited[]){
         /*
             * Depth First Search base function
         */
@@ -101,7 +109,7 @@ public class Graph {
             }
     }
     
-    void dfs(int v){
+    public void dfs(int v){
         /*
             * Depth First Search function
         */
