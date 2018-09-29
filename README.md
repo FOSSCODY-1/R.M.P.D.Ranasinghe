@@ -25,15 +25,15 @@ Enter the source and destination vertices and click on Add Edge button button
 ![](addinganedge.jpg)
 
 ### Performing BFS 
-
+Enter the starting node and click on BFS button
 ![](bfs.jpg)
 
 ### Performing DFS 
-	
+Enter the starting node and click on DFS button	
 ![](dfs.jpg)	
 
 ### Printing the graph 
-	
+Click on Print Graph button	
 ![](print.jpg)	
 	
 ## License
