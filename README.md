@@ -11,8 +11,26 @@ Implementation of directed and undirected graphs with following functionalities 
 
 
 ## Running the program
+
+Download the [Graph_Implementation.jar](Graph_Implementation.jar) file and double click to open it. Then it will open like this.
+
 ![Main Window](window.JPG)
 
+### Creating the graph 
+
+![](creategraph.jpg)
+
+### Adding an edge 
+
+![](addinganedge.jpg)
+
+### Performing BFS 
+
+![](bfs.jpg)
+
+### Performing DFS 
+	
+![](dfs.jpg)	
 	
 ## License
 
