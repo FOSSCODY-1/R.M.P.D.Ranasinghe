@@ -11,7 +11,7 @@ Implementation of directed and undirected graphs with following functionalities 
 
 
 ## Running the program
-![alt text](window.jpg)
+![Main Window](window.JPG)
 
 	
 ## License
