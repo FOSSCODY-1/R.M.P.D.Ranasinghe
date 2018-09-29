@@ -2,6 +2,7 @@
 package graph_implementation;
 
 import java.util.*;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -9,17 +10,19 @@ import java.util.*;
  */
 public class Graph {
       private LinkedList<Integer> graph[];
+      public StringBuilder sbdfs = new StringBuilder();
+      
 
     public Graph() {
-        graph= new LinkedList[20];        
-        for(int i=0; i<20;i++){
-            graph[i]=new LinkedList<>();
-        
-        }
+//        graph= new LinkedList[20];        
+//        for(int i=0; i<20;i++){
+//            graph[i]=new LinkedList<>();
+//        
+//        }
     }
       private int numberOfVertices;
 
-    public Graph(int noOfVertices) {
+    public void createGraph(int noOfVertices) {
         this.numberOfVertices=noOfVertices;
         graph= new LinkedList[noOfVertices];
         
@@ -40,7 +43,7 @@ public class Graph {
         /*
             * This function displays all the vertices in the graph and its connections(edges)
         */
-        
+        StringBuilder sb = new StringBuilder();
         for(int i=0; i<numberOfVertices; i++){
             if(graph[i].size()<0){
                 System.out.println("");
@@ -49,6 +52,7 @@ public class Graph {
                 System.out.print("Vertex " + i + " is connected to : ");
                 for(int j=0;j<graph[i].size();j++){
                     System.out.print(graph[i].get(j)+ " ");
+                    sb.append(i).append(" ").append("-->").append(" ").append(graph[i].get(j)).append("\n");
                 
                 }
                 System.out.println("");
@@ -57,7 +61,8 @@ public class Graph {
         
         }
         
-              
+        //String out = sb.substring(0, sb.length() - 1);
+        JOptionPane.showMessageDialog(null, sb);  
     }
     
     public void bfs(int s){
@@ -67,6 +72,9 @@ public class Graph {
         
         System.out.print(" \nBreadth First Search result of this graph is : ");      
         
+        StringBuilder sb = new StringBuilder();
+        sb.append("Start ");
+        
         boolean visited[]= new boolean[this.numberOfVertices];       // Boolean array has elements equal to no of vertices
         LinkedList<Integer> queue=new LinkedList<Integer>();
         visited[s]=true;
@@ -75,6 +83,7 @@ public class Graph {
         while(queue.size()!=0){
             s= queue.poll();
             System.out.print(s+" ");
+            sb.append("--> ").append(s).append(" ");
             
             Iterator<Integer> i= graph[s].iterator();
             while(i.hasNext()){
@@ -86,7 +95,7 @@ public class Graph {
                 }
             }
         }
-        
+        JOptionPane.showMessageDialog(null, sb);
         System.out.println("");
     }
     
@@ -96,8 +105,11 @@ public class Graph {
             * Depth First Search base function
         */
         
+        
+        
         visited[v]=true;
         System.out.print(v +" ");
+        sbdfs.append("--> ").append(v).append(" ");
         
         Iterator<Integer> i= graph[v].iterator();
         
@@ -107,6 +119,8 @@ public class Graph {
                     dfsBase(n, visited);
                 }
             }
+        
+        
     }
     
     public void dfs(int v){
@@ -114,8 +128,11 @@ public class Graph {
             * Depth First Search function
         */
         
+        System.out.print(" \nDepth First Search result of this graph is : ");
+        sbdfs.append("Start ");
         boolean visited[]=new boolean[this.numberOfVertices];    // Boolean array has elements equal to no of vertices
         dfsBase(v, visited);
+        JOptionPane.showMessageDialog(null, sbdfs);
     
     }
 
@@ -125,7 +142,8 @@ public class Graph {
         Scanner s1= new Scanner(System.in);
         System.out.println("Enter the number of vertices : ");
         int noOfVertices= s1.nextInt();     // Gets the no of vertices for the graph from the user
-        Graph g = new Graph(noOfVertices);
+        Graph g = new Graph();
+        g.createGraph(noOfVertices);
         
 //        g.addEdge(0, 1);
 //        g.addEdge(0, 2);
@@ -171,6 +189,11 @@ public class Graph {
                     g.bfs(1);
                     break;
                     
+                case 4:
+                    System.out.println("\nOutput of DFS of the graph is: ");
+                    g.dfs(1);
+                    break;
+                                        
                 case 0:
                     System.exit(0);
                     break;
